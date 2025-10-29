@@ -4,12 +4,15 @@ import SaludoDesestructurado from './componentes/SaludoDesestructurado'
 import PerfilConObjeto from './componentes/PerfilConObjeto'
 import SaludoBasico from './componentes/SaludoBasico'
 import CajaChildren from './componentes/CajaChildren'
+import BotonConCallback from './componentes/BotonConCallback'
+import ContenedorRenderProp from './componentes/ContenedorRenderProp'
 
 
 export default function page() {
+  
   return (
     <>
-          {/*<SaludoBasico />*/}
+      {/*<SaludoBasico />*/}
           <SaludoBasico nombre="Carlos" entusiasta={true} />
           <SaludoBasico nombre="Juan" entusiasta={false} />
           <SaludoBasico nombre="Maria"  />
@@ -46,6 +49,14 @@ export default function page() {
             <li>item 3</li>
           </ul>
         </CajaChildren>
-     </>  
+        
+        {/*BotonConCallback*/}
+        <BotonConCallback texto="Haz clic aquí" onClick={() => alert("¡Botón clickeado!")} />
+        <BotonConCallback texto="Otro botón" onClick={() => console.log("Otro botón clickeado")} />        
+        <ContenedorRenderProp contenido={<p>Contenido directo</p>} />
+
+      <ContenedorRenderProp render={() => <p>Contenido desde render</p>} />
+
+    </>
   )
 }

@@ -1,6 +1,4 @@
-{/*Prop: usuario (objeto con nombre: string; hobbies: string[]).
-Debe listar hobbies separados por comas.
-Casos: hobbies vacío (muestra "Sin hobbies") y con varios elementos.*/}
+import React from 'react'
 
 export default function PerfilConObjeto({usuario}) {
   return (
